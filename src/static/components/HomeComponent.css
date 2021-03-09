@@ -1,0 +1,554 @@
+/* ======== REUSABLE PIECES ======== */
+
+.section {
+    margin: 40px;
+    margin-top: 0px;
+    padding: 120px 100px 120px 100px;
+} 
+
+.goals,
+.fields,
+.products,
+.aboutus {
+    text-align: center; 
+}
+
+.goals h4,
+.fields h4,
+.products h4,
+.aboutus h4{
+    font-size: 170%;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.goals span,
+.fields h4 span {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #48515d;    
+}
+
+.aboutus h4 span{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #16eb96; 
+}
+
+.fields h5 {
+    font-weight: 500;
+    font-size: 130%;
+}
+
+.goals-bg,
+.products-bg {
+    background-color: #a4a4a4;
+}
+
+.hidden {
+    visibility: hidden;
+}
+/*
+#16eb96
+#e8e8e8
+#48515d
+*/
+
+
+/* ---------- HEADER ---------- */
+
+.main-header {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(../css/images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+
+.main-header span {
+    padding-bottom: 3px;
+    border-bottom: 3px solid #16eb96;
+}
+
+
+.main-header h3,
+.main-header p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.main-header h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    word-spacing: 10px;
+    font-size: 200%;
+}
+
+.main-header p {
+    top: 60%;
+    left: 50%;
+    font-size: 110%;
+}
+
+/* ---------- GOALS ---------- */
+
+
+.goals ul {
+    display: flex;
+    justify-content: center;
+    color: #000;
+
+}
+
+.goals ul li {
+    flex-basis: 100%;
+    margin: 15px 25px 15px 15px;
+    padding: 30px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 6px #333;
+}
+
+
+.goals ul li span {
+    display: block;
+    border: none;
+    font-size: 200%;
+    margin-bottom: 15px;
+}
+
+.goals ul li:nth-child(1) span {
+    color: #fb4f93;
+}
+
+.goals ul li:nth-child(2) span {
+    color: #0957e6;
+}
+
+.goals ul li:nth-child(3) span {
+    color: #bb4c50;
+}
+
+.goals li p {
+    font-weight: 400;
+}
+
+
+
+/* ---------- FIELDS ---------- */
+
+.fields {
+    margin-bottom: 0px;
+}
+
+.fields ul li {
+    display: flex;
+    margin: 80px 0;
+    padding: 60px 0;
+}
+
+.fields ul li:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.fields ul li:nth-child(3) {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.fields ul li div,    
+.fields ul li:nth-child(2) div {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.fields ul li div {
+    position: absolute;
+    right: 10%;
+    margin-top: 25px;
+}
+
+.fields ul li:nth-child(2) div {
+    position: absolute;
+    left: -35%;
+}
+
+.fields ul li div h5 {
+    text-align: center;
+}
+
+.fields ul li div span {
+    align-self: flex-start;
+}
+
+.fields ul li img {
+    width: 300px;
+    height: 300px;
+}
+
+.fields ul li span {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Products ---------- */
+
+
+.products ul {
+    display: flex; 
+    margin: 90px 0;   
+}
+
+.products ul li {
+    flex-grow: 1;
+}
+
+.products li span {
+    font-size: 150%;
+    font-weight: 500;
+    color: #bb4c50;
+}
+
+.products button {
+    height: 50px;
+    width: 180px;
+    font-weight: 500;
+    font-size: 100%;
+    border: 2px transparent;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: #16eb96;
+    box-shadow: 2px 3px 5px #737371 ;
+    transition: all 1s ease;
+    outline: none;
+
+}
+
+.products button:hover,
+.products button:active,
+.products button:focus {
+    background-color: #fff;
+    border: 2px solid #16eb96;
+    outline: none;
+}
+
+/* ---------- REVIEWS ---------- */
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding-bottom: 120px;
+}
+
+.reviews div  {
+    width: 60%;
+    height: 25%;
+    padding: 20px 10px;
+    box-shadow: 0 0  4px #555;   
+    border-radius: 10px; 
+    display: flex;
+    text-align: center;
+}
+
+.reviews img {
+    display: flex;
+    align-self: center;
+    width: 90px;
+    height: auto;
+    margin-left: 15px;
+    border-radius: 50px;
+}
+
+.reviews span small {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.review-1,
+.review-2,
+.review-3 {
+    position: absolute;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.review-1 {
+    animation-name: slide-1;
+}
+.review-2 {
+    animation-name: slide-2;
+}
+.review-3 {
+    animation-name: slide-3;
+}
+
+@keyframes slide-1 {
+    0%, 10% {
+        opacity: 0;
+    }
+
+    10%, 25% {
+        opacity: 1;
+    }
+    33%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-2 {
+    0%, 33% {
+        opacity: 0;
+    }
+
+    41%, 59% {
+        opacity: 1;
+    }
+    66%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-3 {
+    0%, 66% {
+        opacity: 0;
+    }
+
+    75%, 92% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ---------- About Us ---------- */
+
+.aboutus {
+    padding-bottom: 50px;
+}
+.aboutus p {
+    word-spacing: 8px;
+}
+
+.aboutus p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+
+/* ----- FONT AWESOME ----- */
+
+#check {
+    color: #16eb96;
+    margin-right: 10px;
+}
+
+#arrow {
+    color: #000;
+    margin-left: 10px;
+    transition: all 1s ease;
+
+}
+
+
+.products button:hover #arrow {
+    color: #16eb96;
+}
+
+
+
+
+
+/* ***** MEDIA QUERIES ***** */
+
+@media only screen and (max-width: 1024px) {
+    
+    .goals {
+        padding: 100px 30px;
+        margin: 20px;
+        margin-top: 0px;
+    }
+
+    .goals ul li,
+    .goals ul li p {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+}   
+
+@media only screen and (max-width: 960px) {
+   
+    .section {
+        margin: 20px;
+        margin-top: 0px;
+        padding: 100px 40px;
+        font-size: 90%;
+    }
+
+    /* Goals */
+
+    .goals p {
+        margin: 15px;
+        padding: 15px 30px;
+    }
+
+    /* Fields */
+
+    .fields ul li img {
+        width: 100%;
+        max-width: 250px;
+        max-height: 250px;
+        height: auto;
+    }
+
+    .fields ul li div {
+        margin-top: 10px;
+    }
+
+    .fields ul li:nth-child(2) div {
+        left: -30%;
+    }
+
+    .fields ul li:nth-child(3) div {
+        right: 5%;
+    }
+
+    /* Reviews */
+
+    .reviews div {
+        width: 80%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 20px; 
+    }
+
+}
+
+@media only screen and (max-width: 936px) {
+
+    /* Goals */
+
+    .goals ul li {
+        padding: 0px;
+    }
+
+
+    /* Fields */
+    
+    .fields ul li:nth-child(2) div {
+        left: -30%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .section {
+        margin: 20px;
+        margin-top: 0px;
+        padding: 100px 30px;
+        font-size: 80%;
+    }
+       
+    /* Header */
+
+    .main-header {
+        font-size: 80%;
+        text-align: center;
+    }
+
+    .main-header h3{
+        width: 60%;
+    }
+
+    /* Goals */
+
+    .goals ul {
+        display: block;
+    }
+
+    .goals ul li {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    /* Fields */
+
+    .fields ul li {
+        display: block;
+        text-align: start;
+        margin: 10px 0;
+        padding-bottom: 10px;
+    }
+
+    .fields ul li img {
+        max-width: 50%;
+        max-height: 10%;
+        width: auto;
+        height: auto;
+    }
+
+    .fields ul li div,
+    .fields ul li:nth-child(2) div {
+        position: static;
+        text-align: start;
+    }
+
+    .fields ul li div h5 {
+        margin-top: 10px;
+        display: flex;
+        justify-content: start;
+    }
+
+    /* Products */
+
+    .products {
+        font-size: 85%;
+    }
+
+    /* Reviews */
+
+    .reviews {
+        margin-top: 40px;
+        font-size: 85%;
+        justify-content: center;
+    }
+
+    .reviews div {
+        align-items: center;
+
+    }
+  
+}
+
+@media only screen and (max-width: 600px) {
+      
+    .fields ul li img {
+        min-width: 275px;
+        min-height: 275px;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* ----- ANIMATION ----- */
+
+.animate__fadeIn {
+    --animate-duration: 3s;
+}
+
+.animate__fadeInUp {
+    --animate-duration: 3s;
+}
+
+.animate__zoomIn {
+    --animate-duration: 3s;
+}
+
+
