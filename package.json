@@ -2,6 +2,7 @@
   
   "name": "practice",
   "version": "0.1.0",
+  "homepage": "https://sandeeepgithub.github.io/origindivisionsproject/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -14,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
