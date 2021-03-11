@@ -4,15 +4,14 @@ import './HomeComponent.css'
 
 function HomeComponent({position}) {
 
-    const Review = Reviews
-
     const [newPosition, setNewPosition] = useState(null)
     const [goals, setGoals] = useState(false)
     const [fields, setFields] = useState(false)
     const [products, setProducts] = useState(false)
     const [aboutus, setAboutus] = useState(false)
-    
-
+    const [review, setReview] = useState(Reviews[0])
+    const [active, setActive] = useState(0)
+  
     const goalsRef = useRef(null)    
     const fieldsRef = useRef(null)    
     const productsRef = useRef(null) 
@@ -44,7 +43,6 @@ function HomeComponent({position}) {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-
             const val = window.scrollY
 
             if (val > 350 && val < 950) {
@@ -65,10 +63,19 @@ function HomeComponent({position}) {
         })
     }, [])
 
+    const handleReviewclick = (e) => {
+        const target = e.target
+        setReview(Reviews[parseInt(target.getAttribute('data-review'))])
+        setActive(parseInt(target.getAttribute('data-review')))
+        console.log(target.getAttribute('data-review'));
+    }
+
     return(
         <React.Fragment>
             <div className="main-header">
-                <h3 className="animate__animated animate__fadeIn"><span>Origin</span> <span>Divisions</span> </h3>
+                <h3 className="animate__animated animate__fadeIn">
+                    <span>Origin</span> <span>Divisions</span> 
+                </h3>
                 <p className="animate__animated animate__fadeIn">We change dream to a reality.</p>
             </div>
             <div className="goals-bg">
@@ -124,23 +131,20 @@ function HomeComponent({position}) {
                             <p> Years</p>
                         </li>
                     </ul>
-                    <button onClick={() => {alert(`Thanks for choosing a greener initiative.`)}}> Join Us <i id="arrow" className ="fa fa-arrow-right"></i> </button>
+                    <button onClick={() => {alert(`Thanks for choosing a greener initiative.`)}}> Join Us <i id="arrow" className="fa fa-arrow-right"></i> </button>
                 </div>
             </div>
             <div className="section reviews">
-                {Reviews.map((item, index) => {
-                    return(
-                        <div className={item.classname} key={index}>
-                            <img src={item.image} alt={item.name} />
-                            <span>
-                                <q> {item.value} </q> <br/>
-                                <small><b><cite> - {item.name}</cite></b></small>
-                            </span>
-                        </div>
-                    )
-                })}
+               <img src={review.image} alt={review.name} />
+               <p>{review.value}</p>
+               <small><i><b>- {review.name}</b></i></small>
+               <div>
+                   {Reviews.map(rev => (
+                       <span className={active === rev.key ? "actived" : null} onClick={e => handleReviewclick(e)} data-review={rev.key} key={rev.key}> </span>
+                   ))}
+               </div>
             </div>
-            <div className=" aboutus-bg">
+            <div className="aboutus-bg">
                 <div className="section aboutus" ref={aboutusRef}>
                     <h4 className={aboutus ? "animate__animated animate__fadeIn" : "hidden"}>   
                         Who  <span>We</span>  Are

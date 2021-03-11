@@ -239,94 +239,56 @@
 
 .reviews {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 40px 0;
-    padding-bottom: 120px;
 }
 
-.reviews div  {
-    width: 60%;
-    height: 25%;
-    padding: 20px 10px;
-    box-shadow: 0 0  4px #555;   
-    border-radius: 10px; 
-    display: flex;
+.reviews p,
+.reviews small {
     text-align: center;
+    margin-top: 20px;
 }
 
 .reviews img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.reviews div {
     display: flex;
-    align-self: center;
-    width: 90px;
-    height: auto;
-    margin-left: 15px;
-    border-radius: 50px;
+    margin-top: 40px;
+    text-align: center;
 }
 
-.reviews span small {
-    position: absolute;
-    right: 10%;
-    bottom: 10%;
+.reviews div span {
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.review-1,
-.review-2,
-.review-3 {
-    position: absolute;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+.reviews div span::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
-.review-1 {
-    animation-name: slide-1;
+.reviews div span:hover::before {
+    background-color: #45454d;
 }
-.review-2 {
-    animation-name: slide-2;
-}
-.review-3 {
-    animation-name: slide-3;
+.reviews div .actived::before {
+    background-color: #45454d;
 }
 
-@keyframes slide-1 {
-    0%, 10% {
-        opacity: 0;
-    }
 
-    10%, 25% {
-        opacity: 1;
-    }
-    33%, 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes slide-2 {
-    0%, 33% {
-        opacity: 0;
-    }
-
-    41%, 59% {
-        opacity: 1;
-    }
-    66%, 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes slide-3 {
-    0%, 66% {
-        opacity: 0;
-    }
-
-    75%, 92% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
 /* ---------- About Us ---------- */
 
@@ -420,15 +382,6 @@
         right: 5%;
     }
 
-    /* Reviews */
-
-    .reviews div {
-        width: 80%;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin-left: 20px; 
-    }
-
 }
 
 @media only screen and (max-width: 936px) {
@@ -511,19 +464,6 @@
     .products {
         font-size: 85%;
     }
-
-    /* Reviews */
-
-    .reviews {
-        margin-top: 40px;
-        font-size: 85%;
-        justify-content: center;
-    }
-
-    .reviews div {
-        align-items: center;
-
-    }
   
 }
 
@@ -536,6 +476,19 @@
         height: auto;
     }
 }
+
+@media only screen and (max-width: 530px) {
+   
+    .main-header h3 span{
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .main-header p {  
+        margin-top: 25px;      
+        font-size: 100%;
+    } 
+}
+
 
 /* ----- ANIMATION ----- */
 
@@ -550,5 +503,4 @@
 .animate__zoomIn {
     --animate-duration: 3s;
 }
-
 
