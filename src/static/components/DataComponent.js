@@ -82,7 +82,7 @@ export const Reviews = [
         classname: "review-1",
         image: girl, 
         name: "Natasha",
-        value: "I have been with them since 2014. They are the best in product and helping customers."
+        value: "I have been with them since 2014. They are the best in their product management."
     },
     {
         key: 1,

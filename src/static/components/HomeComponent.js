@@ -67,8 +67,17 @@ function HomeComponent({position}) {
         const target = e.target
         setReview(Reviews[parseInt(target.getAttribute('data-review'))])
         setActive(parseInt(target.getAttribute('data-review')))
-        console.log(target.getAttribute('data-review'));
     }
+
+    // setInterval(() => {
+    //     if(review.key < Reviews.length - 1) {
+    //         setReview(Reviews[review.key + 1])
+    //     } else {
+    //         setReview(Reviews[0])
+    //     }
+    //     console.log(review.key);
+    // }, 5000);
+
 
     return(
         <React.Fragment>
@@ -135,14 +144,27 @@ function HomeComponent({position}) {
                 </div>
             </div>
             <div className="section reviews">
-               <img src={review.image} alt={review.name} />
+               {/* <img src={review.image} alt={review.name} />
                <p>{review.value}</p>
                <small><i><b>- {review.name}</b></i></small>
                <div>
                    {Reviews.map(rev => (
                        <span className={active === rev.key ? "actived" : null} onClick={e => handleReviewclick(e)} data-review={rev.key} key={rev.key}> </span>
                    ))}
-               </div>
+               </div> */}
+                <h4>What our <span>clients</span> say about us</h4>
+                <ul>  
+                    {Reviews.map((review) => {
+                       return ( 
+                            <li>
+                                <span> <i id="quote" className="fa fa-quote-left"></i> </span>
+                                <p>{review.value}</p>                                
+                                <img src={review.image} alt={review.name} />
+                                <small><i><b>- {review.name}</b></i></small>
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
             <div className="aboutus-bg">
                 <div className="section aboutus" ref={aboutusRef}>

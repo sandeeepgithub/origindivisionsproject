@@ -9,13 +9,21 @@
 .goals,
 .fields,
 .products,
+.reviews,
 .aboutus {
     text-align: center; 
 }
 
+.goals,
+.reviews {
+    background-color: #f4f7fe
+}
+
+
 .goals h4,
 .fields h4,
 .products h4,
+.reviews h4,
 .aboutus h4{
     font-size: 170%;
     margin-bottom: 50px;
@@ -23,14 +31,11 @@
     font-weight: 500;
 }
 
-.goals span,
-.fields h4 span {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #48515d;    
-}
-
+.goals h4 span,
+.fields h4 span, 
+.reviews h4 span,
 .aboutus h4 span{
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     border-bottom: 3px solid #16eb96; 
 }
 
@@ -39,7 +44,6 @@
     font-size: 130%;
 }
 
-.goals-bg,
 .products-bg {
     background-color: #a4a4a4;
 }
@@ -95,20 +99,22 @@
 
 /* ---------- GOALS ---------- */
 
-
+.goals {
+    margin-top: 40px;
+}
 .goals ul {
     display: flex;
     justify-content: center;
     color: #000;
-
 }
 
 .goals ul li {
     flex-basis: 100%;
     margin: 15px 25px 15px 15px;
     padding: 30px 10px;
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 2px 4px 6px #333;
+    box-shadow: 0px 5px 20px #aaa;
 }
 
 
@@ -236,7 +242,7 @@
 }
 
 /* ---------- REVIEWS ---------- */
-
+/* 
 .reviews {
     display: flex;
     flex-direction: column;
@@ -286,14 +292,54 @@
 }
 .reviews div .actived::before {
     background-color: #45454d;
+} */
+
+
+.reviews ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;   
 }
 
+.reviews ul li {
+    flex-basis: 100%;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px #aaa;
+    margin: 0px 15px;
+    background-color: #fff;
+}
+
+.reviews ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 5px 0px 0px 5px;
+    text-align: left;
+    font-size: 200%;
+    color: yellow;
+}
+
+.reviews img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.reviews p,
+.reviews small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 /* ---------- About Us ---------- */
 
 .aboutus {
-    padding-bottom: 50px;
+    margin-bottom: 0px;
 }
 .aboutus p {
     word-spacing: 8px;
@@ -329,7 +375,17 @@
 
 /* ***** MEDIA QUERIES ***** */
 
+@media only screen and (max-width: 1100px) {
+    /* REviews */
+
+    .reviews {
+        padding: 100px 50px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
+    
+    /* Goals */
     
     .goals {
         padding: 100px 30px;
@@ -339,6 +395,20 @@
 
     .goals ul li,
     .goals ul li p {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Reviews */
+
+
+    .reviews {
+        padding: 100px 30px;
+        margin: 20px;
+        margin-top: 0px;
+    }
+
+    .reviews ul li {
         padding: 10px;
         margin: 10px;
     }
@@ -457,6 +527,36 @@
         margin-top: 10px;
         display: flex;
         justify-content: start;
+    }
+
+     /* Reviews */
+
+
+    .reviews ul {
+        display: block;
+    }
+
+    .reviews ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .reviews ul li span {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin: 5px 5px 0px 5px;
+        text-align: left;
+        font-size: 200%;
+        color: yellow;
+    }
+
+    .reviews ul li img,
+    .reviews ul li small {
+        margin-left: 10px;
     }
 
     /* Products */
